@@ -50,12 +50,12 @@ module.exports = function(app) {
                 totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
                 
                 // If the sum of differences is less then the differences of the current "best match"
-                if (totalDifference <= closestMatch.friendDifference){
+                if (totalDifference <= closestMatch.scoreDifference){
             
                     // Reset the closestMatch to be the new friend. 
                     closestMatch.name = friends[i].name;
                     closestMatch.photo = friends[i].photo;
-                    closestMatch.friendDifference = totalDifference;
+                    closestMatch.scoreDifference = totalDifference;
                 }
             }
         }
